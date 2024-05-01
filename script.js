@@ -86,7 +86,7 @@ async function main() {
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`https://zayedwithay.github.io/Apple-Music-Clone/songs/${folder}`)
+    let a = await fetch(`https://zayedwithay.github.io/Apple-Music-Clone/songs/${folder}/`)
     let response = await a.text();
     
     let div = document.createElement("div")
