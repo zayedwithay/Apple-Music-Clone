@@ -9,9 +9,11 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`tree/main/songs/${folder}/`)
-    console.log(a)
+    let a = await fetch(`https://api.github.com/repos/zayedwithay/Apple-Music-Clone/tree/main/${folder}`)
+    
+
     let response = await a.text();
+    console.log(response)
     
     let div = document.createElement("div")
     div.innerHTML = response;
