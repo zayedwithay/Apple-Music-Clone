@@ -9,7 +9,7 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`songs/${folder}/`)
+    let a = await fetch(`${folder}/`)
     console.log(a)
     let response = await a.text();
     
