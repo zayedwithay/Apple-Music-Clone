@@ -3,60 +3,6 @@ let currentSong = new Audio();
 let songs;
 let currFolder;
 
-//get song into an array 
-
-async function getSongs(folder) {
-    currFolder = folder;
-    let a = await fetch(`${folder}`)
-    let response = await a.text();
-    
-    let div = document.createElement("div")
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a")
-    songs = []
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`/${folder}/`)[1])
-        }
-    }
-    //get list of all songs
- 
-
-    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
-    songUL.innerHTML= " "
-
-    for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll("%20", " ")}</li>`;
-
-    }
-
-    Array.from(document.querySelector(".songList").getElementsByTagName("ul")).forEach(e => {
-        // e.addEventListener("click", element => {
-            playMusic(e.firstElementChild.innerHTML.trim())
-        // })
-    })
-
-}
-
-
-// play music 
-const playMusic = (track, pause = false) => {
-    //  let audio = new audio(track)
-    currentSong.src = `/${currFolder}/` + track
-    if (!pause) {
-
-        currentSong.play()
-        play.src = "pause.svg"
-    }
-
-    document.querySelector(".songinfo").innerHTML = decodeURI(track)
-
-
-
-
-}
-
 
 async function main() {
 
@@ -130,6 +76,60 @@ async function main() {
 
 
 
+
+
+
+
+}
+
+//get song into an array 
+
+async function getSongs(folder) {
+    currFolder = folder;
+    let a = await fetch(`${folder}`)
+    let response = await a.text();
+    
+    let div = document.createElement("div")
+    div.innerHTML = response;
+    let as = div.getElementsByTagName("a")
+    songs = []
+    for (let index = 0; index < as.length; index++) {
+        const element = as[index];
+        if (element.href.endsWith(".mp3")) {
+            songs.push(element.href.split(`/${folder}/`)[1])
+        }
+    }
+    //get list of all songs
+ 
+
+    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
+    songUL.innerHTML= " "
+
+    for (const song of songs) {
+        songUL.innerHTML = songUL.innerHTML + `<li>${song.replaceAll("%20", " ")}</li>`;
+
+    }
+
+    Array.from(document.querySelector(".songList").getElementsByTagName("ul")).forEach(e => {
+        // e.addEventListener("click", element => {
+            playMusic(e.firstElementChild.innerHTML.trim())
+        // })
+    })
+
+}
+
+
+// play music 
+const playMusic = (track, pause = false) => {
+    //  let audio = new audio(track)
+    currentSong.src = `/${currFolder}/` + track
+    if (!pause) {
+
+        currentSong.play()
+        play.src = "pause.svg"
+    }
+
+    document.querySelector(".songinfo").innerHTML = decodeURI(track)
 
 
 
