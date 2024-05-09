@@ -14,7 +14,7 @@
 
 body {
   background-color: white;
-
+  
 }
 
 
@@ -82,7 +82,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
   margin-top: 22px;
   margin-left: 8px;
@@ -98,7 +98,7 @@ body {
 
 }
 
-ul {
+.topnav ul {
   margin-top: 25px;
 }
 
@@ -115,6 +115,7 @@ ul {
   flex-direction: row;
   height: 55px;
   border-bottom: 1px solid rgb(219, 219, 219);
+  z-index: 2;
 
 }
 
@@ -145,18 +146,21 @@ ul {
 
 .section {
   display: flex;
+  width: 100%;
+  flex-direction: row;
 }
 
 
 
 .sec1 {
+ 
   display: flex;
   flex-direction: column;
   margin-left: 40px;
   margin-top: 12px;
   gap: 2px;
 
-  width: 78vh;
+  width: 50%;
 }
 
 .sec1 li {
@@ -190,16 +194,17 @@ ul {
 }
 
 .contain1 {
+  
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  width: 480px;
+  width: 450px;
   height: 280px;
-  background-image: url(rap.jpg);
+  background-image: url(img/drake-family-matters.jpg);
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-size: 500px 280px;
+background-repeat: no-repeat;
+  background-size: 450px 280px;
   border-radius: 8px;
   
   cursor: pointer;
@@ -216,11 +221,11 @@ ul {
 .sec2 {
   display: flex;
   flex-direction: column;
-  margin-left: 5px;
+  margin-left: 40px;
   margin-top: 12px;
   gap: 2px;
 
-  width: 78vh;
+  width: 50%;
 }
 
 .sec2 li {
@@ -242,18 +247,21 @@ ul {
 }
 
 .contain2 {
+
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
-  width: 480px;
+  width: 450px;
   height: 280px;
-  background-image: url(kl.jpg);
+  background-image: url(img/not\ like\ us.jpg);
   background-color: #ffffff;
   background-repeat: no-repeat;
-  background-size: 480px 280px;
-cursor: pointer;
+  background-size: 500px 300px;
+  cursor: pointer;
   border-radius: 8px;
+  
+  
 
 }
 
@@ -278,8 +286,9 @@ cursor: pointer;
 .pp .box {
   display: flex;
   flex-direction: row;
-  gap: 54px;
+  gap: 42px;
   height: 230px;
+  flex-wrap: nowrap;
 
 }
 
@@ -455,7 +464,7 @@ transition: width 0.2s ;
 }
 
 .songList ul {
-
+visibility: hidden;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -480,15 +489,18 @@ cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2px;
+  margin-top: 10px;
   left: 350px;
   height: 20px;
   width: 250px;
-  padding-top: 8px;
+  padding-top: 0px;
   font-size: small;
   font-weight: 600;
-  color: rgb(53, 53, 53);
-
+  color: red;
+  border-style: ridge;
+border-width:1px;
+border-color: red;
+border-radius: 6px;
 
 }
 
@@ -532,16 +544,453 @@ cursor: pointer;
 .sign {
   background-color: #dd0404;
   height: 30px;
-  margin-left: 60px;
+  margin-left: 15px;
   color: #ffffff;
   font-weight: 700;
   margin-top: 8px;
   padding: 4px 20px 0px 20px;
   border-radius: 10px;
+  font-weight: 600;
 
 }
 
 .sign a {
   text-decoration: none;
   color: #ffffff;
+}
+
+
+
+
+
+
+/* TABLET */
+@media only screen and (max-width: 1024px) {
+
+ .songList ul {
+  visibility: hidden;
+  
+ }
+.section {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  flex-direction: column;
+}
+.topnav{
+  margin-left: 10px;
+  width: 110px;
+}
+.topnav input[type=text] {
+  width: 40px;
+
+
+
+}
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+
+
+  .home p{
+   visibility: hidden;
+  }
+.home input{ 
+visibility: hidden;  
+
+
+}
+.topnav {
+  visibility: collapse;
+ margin-left: -30px;
+border-color: white;
+margin-top: 0px;
+  width: 80px;
+}
+.topnav svg{
+ 
+  margin-right: -100px;
+  
+
+}
+.home ul{
+margin-top: -20px;
+}
+
+.logo {
+  margin-top: 2px;
+height: 20px;
+width: 10px;
+  margin-left: -15px;
+
+}
+.logo img{
+  margin-left: 20px;
+  margin-top: -20px;
+  height: 60px;
+  width: 40px;
+}
+
+
+
+.section {
+  margin-left: -80px;
+  justify-content:left;
+  align-items: left;
+  display: flex;
+  
+  flex-direction: column;
+}
+
+
+.sec1 li {
+  list-style: none;
+  font-size: 7px;
+  color: rgb(123, 123, 123);
+  font-weight: 600;
+}
+
+.sec1 #rap {
+  color: black;
+  font-size: x-small;
+  font-weight: 500;
+}
+
+.sec1 #am {
+  font-weight: 400;
+  font-size: x-small;
+}
+
+
+.contain1 {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  width: 200px;
+  height: 120px;
+  background-image: url(img/drake-family-matters.jpg);
+  background-color: #ffffff;
+background-repeat: no-repeat;
+  background-size: 200px 120px;
+  border-radius: 8px;
+  
+  cursor: pointer;
+
+}
+
+
+
+.sec2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 12px;
+  gap: 2px;
+
+  width: 50%;
+}
+
+.sec2 li {
+  list-style: none;
+  font-size: 7px;
+  color: rgb(123, 123, 123);
+  font-weight: 600;
+}
+
+.sec2 #rap {
+  color: black;
+  font-size: x-small;
+  font-weight: 500;
+}
+
+.sec2 #am {
+  font-weight: 400;
+  font-size: x-small;
+}
+
+.contain2 {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 200px;
+  height: 120px;
+  background-image: url(img/not\ like\ us.jpg);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 200px 120px;
+  cursor: pointer;
+  border-radius: 8px;
+  border-radius: 8px;
+  
+  
+
+}
+
+
+
+
+
+
+.pp .box {
+ margin-left: 50px;
+  flex-direction: column;
+  gap: 140px;
+  height: 200px;
+
+}
+
+
+.box #box1 {
+  height: 10px;
+  width: 100px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box #box1 img {
+  width: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.box #box1:hover {
+  opacity: 85%;
+  --a: 1;
+}
+
+
+
+
+.contain1 > .play {
+  margin-top: 196px; 
+  margin-left: 137px;
+  
+  
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  opacity: var(--a);
+  
+}
+
+.contain2 > .play {
+  margin-top: 377px;
+  margin-left: 120px;
+  
+  
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  opacity: var(--a);
+  
+}
+
+
+.play{
+
+  top: 21px;
+  left: 22px;
+
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  opacity: var(--a);
+
+}
+.pp h2 {
+  font-size: small;
+  font-weight: 500;
+  color: rgb(69, 69, 69);
+}
+
+.pp p {
+  font-size: x-small;
+  font-weight: 300;
+  color: grey;
+
+}
+.pp .p{
+  font-size: medium;
+  margin-left: -30px;
+}
+
+.box #box2 {
+  height: 10px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+}
+
+.box #box2 img {
+  width: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.box #box2:hover {
+  opacity: 85%;
+  --a: 1;
+}
+
+
+.box #box3 {
+  height: 10px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+}
+
+.box #box3 img {
+  width: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.box #box3:hover {
+  opacity: 85%;
+  --a: 1;
+}
+
+
+.box #box4 {
+  height: 10px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+}
+
+.box #box4 img {
+  width: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.box #box4:hover {
+  opacity: 85%;
+  --a: 1;
+}
+
+
+.box #box5 {
+  height: 10px;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+}
+
+.box #box5 img {
+  width: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.box #box5:hover {
+  opacity: 85%;
+  --a: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.songbuttons{
+  margin-left: 0px;
+  margin-top: 7px;
+
+}
+
+.songbuttons img{
+  height: 20px;
+}
+
+.seekbar{
+  margin-left: 20px;
+  width: 130px;
+  height: 0px;
+
+}
+
+.songinfo {
+margin-left: -240px;
+width: 100px;
+font-family: "Open Sans", sans-serif;
+font-size: xx-small;
+
+
+
+}
+
+.volume{
+  margin-left: 20px;
+}
+.volume img{
+  height: 17px;
+  width: 14px;
+}
+
+.range{
+  width: 70px;
+}
+
+
+
+
+
+
+
+.sign{
+  visibility: hidden;
+}
+.left{
+  height: 1400px;
+  padding: 0px;
+  width: 50px;
+ 
+}
+
+
+
+.browse{
+  font-family: "Open Sans", sans-serif;
+  margin-top: 85px;
+  margin-left: 4px;
+  font-weight: 690;
+  font-size: 18px;
+  color: rgb(35, 35, 35);
+  letter-spacing: -1px;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  padding-bottom: 5px;
+  width: 500px;
+}
+
+.songList ul{
+  visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

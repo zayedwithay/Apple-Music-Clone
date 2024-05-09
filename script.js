@@ -9,7 +9,7 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`https://raw.githubusercontent.com/zayedwithay/Apple-Music-Clone/main/songs/${folder}`)
+    let a = await fetch(`${folder}`)
     
 
     let response = await a.text();
@@ -52,10 +52,12 @@ async function getSongs(folder) {
         if (!pause) {
             
             currentSong.play()
-            play.src = "pause.svg"
+            play.src = "img/pause.svg"
         }
+        var periodIndex = track.indexOf('.');
+        var result = track.substring(0, periodIndex);
         
-        document.querySelector(".songinfo").innerHTML = decodeURI(track)
+        document.querySelector(".songinfo").innerHTML = decodeURI(result)
         
         
         
@@ -72,11 +74,11 @@ async function getSongs(folder) {
         play.addEventListener("click", () => {
             if (currentSong.paused) {
                 currentSong.play()
-                play.src = "pause.svg"
+                play.src = "img/pause.svg"
             }
             else {
                 currentSong.pause()
-                play.src = "player.svg"
+                play.src = "img/player.svg"
             }
         })
     
@@ -132,6 +134,8 @@ async function getSongs(folder) {
     
         })
     
+    // song list 
+
     
     
     

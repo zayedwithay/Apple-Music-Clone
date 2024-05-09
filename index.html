@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Music - Web Player</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utility.css">
+
 </head>
 
 <body>
     <div class="container flex">
         <div class="left  grey">
             <div class="home">
-                <div class="logo"><img src="logo.svg " alt=""></div>
+                <div class="logo"><img src="img/logo.svg " alt=""></div>
                 <div class="topnav">
                     <svg height="12" width="16" viewBox="0 0 16 16" class="search-svg" aria-hidden="true">
                         <path
@@ -24,35 +24,42 @@
 
                 </div>
                 <ul>
-                    <a href=""> <li>
-                       <img src="listen.svg" alt="">
-                        Listen Now
-                    </li></a>
-                    <a href=""><li>
-                        <img src="browse.svg" alt="">
-                        Browse
-                    </li></a>
-                    <a href=""> <li>
-                        <img src="radio.svg" alt="">
-                        Radio
-                    </li></a>
+                    <a href="">
+                        <li>
+                            <img src="img/listen.svg" alt="">
+                            <p>Listen Now</p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="img/browse.svg" alt="">
+                            <p>Browse</p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="img/radio.svg" alt="">
+                            <p>Radio</p>
+                        </li>
+                    </a>
                 </ul>
             </div>
-<div class="songList">
-    <ul>
-       
-    </ul>
-</div>
+            <div class="songList">
+                <ul>
+
+
+                </ul>
+            </div>
         </div>
         <div class="right ">
             <div class="playbar">
                 <div class="songbuttons">
-                    <img id="prev" src="prev.svg" alt="">
-                    <img id="play" src="player.svg" alt="">
-                    <img id="next" src="next.svg" alt="">
+                    <img id="prev" src="img/prev.svg" alt="">
+                    <img id="play" src="img/player.svg" alt="">
+                    <img id="next" src="img/next.svg" alt="">
                 </div>
-                <div class="songinfo"> 
-                    
+                <div class="songinfo">
+
                 </div>
                 <div class="seekbar">
                     <div class="sb"></div>
@@ -60,14 +67,14 @@
 
                 </div>
                 <div class="volume">
-                   <img src="volume.svg" alt="">
+                    <img src="img/volume.svg" alt="">
                     <div class="range">
                         <input type="range" name="volume" class="slider">
                     </div>
 
                 </div>
-               <div class="sign">
-                <a href="">  Sign Up</a>
+                <div class="sign">
+                    <a href=""> Sign Up</a>
                 </div>
 
             </div>
@@ -82,16 +89,16 @@
             <div class="section">
                 <div class="sec1">
 
-                    <li> UPDATED PLAYLIST</li>
-                    <li id="rap"> Rap Life</li>
-                    <li id="am"> Apple Music Hip Hop</li>
-                    
-                    <div  class="contain1 ">
-                        <div data-folder="red" class="play">
+                    <li> NEW SINGLE </li>
+                    <li id="rap"> Family Matters </li>
+                    <li id="am"> Drake </li>
+
+                    <div class="contain1 ">
+                        <div data-folder="family" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
                                 <circle cx="45" cy="45" r="40" fill="white" />
-    
+
                                 <switch>
                                     <g>
                                         <path
@@ -105,22 +112,22 @@
                                     </g>
                                 </switch>
                             </svg>
-    
-    
+
+
                         </div>
                     </div>
                 </div>
                 <div class="sec2">
 
-                    <li> NEW ALBUM</li>
-                    <li id="rap"> Damn</li>
+                    <li> NEW SINGLE </li>
+                    <li id="rap"> Not Like Us </li>
                     <li id="am"> Kendrick Lamar</li>
-                    <div  class="contain2">
-                        <div data-folder="love" class="play">
+                    <div class="contain2">
+                        <div data-folder="not" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
                                 <circle cx="45" cy="45" r="40" fill="white" />
-    
+
                                 <switch>
                                     <g>
                                         <path
@@ -134,8 +141,8 @@
                                     </g>
                                 </switch>
                             </svg>
-    
-    
+
+
                         </div>
                     </div>
                 </div>
@@ -143,8 +150,8 @@
             <div class="pp">
                 <div class="p"> Priority Playlists </div>
                 <div class="box">
-                    <div  class="b" id="box1">
-                        <div  data-folder="brand" class="play">
+                    <div class="b" id="box1">
+                        <div data-folder="brand" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
                                 <circle cx="45" cy="45" r="40" fill="white" />
@@ -165,12 +172,12 @@
 
 
                         </div>
-                        <img src="sm.jpg" alt="">
+                        <img src="img/sm.jpg" alt="">
                         <h2>Lunch Break</h2>
                         <p>Seedhe Maut</p>
 
                     </div>
-                    <div  class="b" id="box2">
+                    <div class="b" id="box2">
                         <div data-folder="street" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
@@ -192,12 +199,13 @@
 
 
                         </div>
-                        <img src="sd.jpg" alt="">
+
+                        <img src="img/sd.jpg" alt="">
                         <h2>Street Dreams</h2>
                         <p>Divine & Karan Aujla</p>
                     </div>
 
-                    <div   class="b" id="box3">
+                    <div class="b" id="box3">
                         <div data-folder="her" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
@@ -219,11 +227,12 @@
 
 
                         </div>
-                        <img src="hl.jpg" alt="">
+
+                        <img src="img/hl.jpg" alt="">
                         <h2>Herloss</h2>
                         <p>Drake & 21 Savage</p>
                     </div>
-                    <div   class="b" id="box4">
+                    <div class="b" id="box4">
                         <div data-folder="uto" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
@@ -245,11 +254,11 @@
 
 
                         </div>
-                        <img src="uto.jpg" alt="">
+                        <img src="img/uto.jpg" alt="">
                         <h2>Utopia</h2>
                         <p>Travis Scott</p>
                     </div>
-                    <div   class="b" id="box5">
+                    <div class="b" id="box5">
                         <div data-folder="n" class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100"
                                 viewBox="0 0 100 100" id="play-button">
@@ -271,7 +280,7 @@
 
 
                         </div>
-                        <img src="n.jpg" alt="">
+                        <img src="img/n.jpg" alt="">
                         <h2>N95</h2>
                         <p>Kendrick Lamar</p>
                     </div>
