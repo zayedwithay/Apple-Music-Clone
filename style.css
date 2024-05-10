@@ -923,7 +923,7 @@ background-repeat: no-repeat;
 }
 
 .songinfo {
-margin-left: -240px;
+margin-left: -260px;
 width: 100px;
 font-family: "Open Sans", sans-serif;
 font-size: xx-small;
@@ -972,7 +972,7 @@ font-size: xx-small;
   letter-spacing: -1px;
   border-bottom: 1px solid rgb(216, 216, 216);
   padding-bottom: 5px;
-  width: 500px;
+  width: 300px;
 }
 
 .songList ul{
@@ -980,7 +980,9 @@ font-size: xx-small;
 }
 
 
-
+.playbar{
+  width: 410px;
+}
 
 
 
