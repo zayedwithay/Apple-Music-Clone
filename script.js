@@ -128,7 +128,8 @@ async function getSongs(folder) {
             e.addEventListener("click", async item => {
     
                
-                 songs = await getSongs(`/tree/main/songs/${item.currentTarget.dataset.folder}`)
+                 songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+                 console.log(`songs/${item.currentTarget.dataset.folder}`);
            
             })
     
