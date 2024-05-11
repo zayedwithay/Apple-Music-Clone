@@ -12,7 +12,7 @@
     currFolder = folder;
    console.log(folder)
 
-    let a = await fetch(`${folder}/`)
+    let a = await fetch(`/${folder}/`)
 
 
     let response = await a.text();
