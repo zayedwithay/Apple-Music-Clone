@@ -3,15 +3,13 @@
  let songs;
  let currFolder;
 
-
-
  //get song into an array 
-
+ 
  async function getSongs(folder)
   {
     currFolder = folder;
-
-    let a = await fetch(`/main/tree/${folder}/`)
+console.log(folder);
+    let a = await fetch(`songs/family/`)
 
 
     let response = await a.text();
