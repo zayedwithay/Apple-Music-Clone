@@ -9,6 +9,7 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
+    console.log(folder)
     let a = await fetch(`/${folder}/`)
      
 
@@ -39,6 +40,7 @@ async function getSongs(folder) {
     Array.from(document.querySelector(".songList").getElementsByTagName("ul")).forEach(e => {
         // e.addEventListener("click", element => {
             playMusic(e.firstElementChild.innerHTML.trim())
+            console.log(e.firstElementChild.innerHTML.trim())
             // })
         })
         
