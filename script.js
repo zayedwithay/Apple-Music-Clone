@@ -9,7 +9,7 @@ let currFolder;
 
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`${folder}`)
+    let a = await fetch(`/${folder}/`)
      
 
     let response = await a.text();
@@ -63,6 +63,21 @@ async function getSongs(folder) {
         
         
     }
+
+     // load playlist according to box
+    
+     Array.from(document.getElementsByClassName("play")).forEach(e => {
+        
+        e.addEventListener("click", async item => {
+
+           
+            songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+            console.log(`songs/${item.currentTarget.dataset.folder}`)
+           
+       
+        })
+
+    })
     
     async function main() {
     
@@ -121,19 +136,7 @@ async function getSongs(folder) {
             currentSong.volume = parseInt(e.target.value) / 100
         })
     
-        // load playlist according to box
-    
-        Array.from(document.getElementsByClassName("play")).forEach(e => {
-        
-            e.addEventListener("click", async item => {
-    
-               
-                songs = await getSongs(`/songs/${item.currentTarget.dataset.folder}`)
-               
-           
-            })
-    
-        })
+       
     
     // song list 
 
