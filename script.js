@@ -10,8 +10,9 @@
  async function getSongs(folder)
   {
     currFolder = folder;
+   console.log(folder)
 
-    let a = await fetch(`/main/tree/${folder}/`)
+    let a = await fetch(`${folder}/`)
 
 
     let response = await a.text();
