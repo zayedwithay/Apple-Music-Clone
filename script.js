@@ -10,7 +10,7 @@ let currFolder;
 async function getSongs(folder) {
     currFolder = folder;
     let a = await fetch(`${folder}`)
-    
+     
 
     let response = await a.text();
     console.log(response)
@@ -128,8 +128,8 @@ async function getSongs(folder) {
             e.addEventListener("click", async item => {
     
                
-                console.log(`songs/${item.currentTarget.dataset.folder}`);
-                 songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+                songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+               
            
             })
     
