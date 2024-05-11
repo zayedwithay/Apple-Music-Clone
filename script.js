@@ -11,7 +11,7 @@
   {
     currFolder = folder;
 
-    let a = await fetch(`/${folder}/`)
+    let a = await fetch(`/main/tree/${folder}/`)
 
 
     let response = await a.text();
