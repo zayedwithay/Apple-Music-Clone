@@ -8,7 +8,6 @@
  async function getSongs(folder)
   {
     currFolder = folder;
-console.log(folder);
     let a = await fetch(`songs/family/`)
 
 
